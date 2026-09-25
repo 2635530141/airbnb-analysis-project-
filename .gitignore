@@ -214,5 +214,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Local datasets
+data/raw/**
+!data/raw/.gitkeep
+
+# macOS
+.DS_Store
+
 # Streamlit
 .streamlit/secrets.toml
