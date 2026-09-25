@@ -20,7 +20,7 @@ jupyter notebook
 
 - `data/raw/`：】
 - `data/processed/`：
-- `notebooks/`：
+- `notebooks/`：000000
 - `src/`：
 - `outputs/`：
 
