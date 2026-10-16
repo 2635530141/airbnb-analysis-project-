@@ -24,4 +24,3 @@ jupyter notebook
 - `src/`：
 - `outputs/`：
 
-testing
