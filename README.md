@@ -1,6 +1,6 @@
 # Airbnb Analysis Project
 
-MaCSS 2026
+MaCSS
 
 ## Enviornment
 
