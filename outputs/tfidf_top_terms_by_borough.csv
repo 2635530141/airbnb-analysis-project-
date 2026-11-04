@@ -1,0 +1,51 @@
+borough,rank,term,distinctiveness
+Manhattan,1,central,0.0201
+Manhattan,2,building,0.0176
+Manhattan,3,times,0.0116
+Manhattan,4,elevator,0.0114
+Manhattan,5,furnished,0.0089
+Manhattan,6,hudson,0.0087
+Manhattan,7,property,0.0086
+Manhattan,8,heart,0.0085
+Manhattan,9,studio,0.0082
+Manhattan,10,hotel,0.008
+Brooklyn,1,train,0.0101
+Brooklyn,2,brownstone,0.0079
+Brooklyn,3,space,0.0067
+Brooklyn,4,garden,0.0065
+Brooklyn,5,barclays,0.0064
+Brooklyn,6,private,0.0063
+Brooklyn,7,cafes,0.0063
+Brooklyn,8,trains,0.0059
+Brooklyn,9,shops,0.0058
+Brooklyn,10,backyard,0.0056
+Queens,1,minutes,0.0191
+Queens,2,mins,0.0122
+Queens,3,lirr,0.0112
+Queens,4,parking,0.011
+Queens,5,bus,0.011
+Queens,6,close,0.0104
+Queens,7,house,0.0102
+Queens,8,drive,0.01
+Queens,9,place,0.0082
+Queens,10,train,0.0081
+Bronx,1,yankee,0.0278
+Bronx,2,yankee stadium,0.0276
+Bronx,3,stadium,0.0237
+Bronx,4,zoo,0.0236
+Bronx,5,botanical,0.0167
+Bronx,6,zoo botanical,0.0134
+Bronx,7,botanical garden,0.0119
+Bronx,8,montefiore,0.0116
+Bronx,9,hospital,0.0113
+Bronx,10,hospitals,0.0106
+Staten Island,1,ferry,0.0682
+Staten Island,2,bus,0.026
+Staten Island,3,parking,0.0233
+Staten Island,4,free,0.0228
+Staten Island,5,medical,0.0174
+Staten Island,6,free ferry,0.0164
+Staten Island,7,house,0.0162
+Staten Island,8,bus stop,0.0151
+Staten Island,9,min,0.014
+Staten Island,10,private,0.0131
