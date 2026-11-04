@@ -1,0 +1,41 @@
+quarter,rank,term,distinctiveness
+2025Q4,1,subway,0.0034
+2025Q4,2,cozy,0.0031
+2025Q4,3,apartment,0.0022
+2025Q4,4,christmas,0.0018
+2025Q4,5,safe,0.0017
+2025Q4,6,warm,0.0015
+2025Q4,7,station,0.0014
+2025Q4,8,place,0.0013
+2025Q4,9,neighborhood,0.0012
+2025Q4,10,subway station,0.0011
+2026Q1,1,cold,0.0024
+2026Q1,2,cozy,0.0021
+2026Q1,3,warm,0.0018
+2026Q1,4,definitely,0.0014
+2026Q1,5,blizzard,0.0013
+2026Q1,6,staff,0.0013
+2026Q1,7,amazing,0.0013
+2026Q1,8,heater,0.0012
+2026Q1,9,price,0.0011
+2026Q1,10,heating,0.0011
+2026Q2,1,neighborhood,0.0012
+2026Q2,2,best,0.001
+2026Q2,3,quiet,0.0009
+2026Q2,4,beautiful,0.0007
+2026Q2,5,graduation,0.0007
+2026Q2,6,lovely,0.0007
+2026Q2,7,train,0.0007
+2026Q2,8,welcoming,0.0006
+2026Q2,9,noisy,0.0006
+2026Q2,10,place stay,0.0006
+2026Q3,1,staff,0.0024
+2026Q3,2,wonderful,0.0017
+2026Q3,3,stay,0.0017
+2026Q3,4,air,0.0015
+2026Q3,5,wonderful stay,0.0013
+2026Q3,6,parking,0.0012
+2026Q3,7,conditioning,0.0012
+2026Q3,8,air conditioning,0.0012
+2026Q3,9,cool,0.0012
+2026Q3,10,worked,0.0011
