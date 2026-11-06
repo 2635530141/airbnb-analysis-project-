@@ -6,11 +6,7 @@ How do Airbnb prices vary by neighbourhood in New York City and over time?
 
 ## Team
 
-- Justin
-- Stephen
-- David
-- Deanne
-- Anne
+- Justin Kaye, Stephen Wu, David He, Deanne Balsbaugh, Anne Kim
 
 ## Data
 
@@ -20,38 +16,35 @@ How do Airbnb prices vary by neighbourhood in New York City and over time?
 
 ## Methods
 
-TF-IDF on listing descriptions and reviews, by borough and by quarter.
+TF-IDF on listing descriptions and reviews, by borough, and by quarter.
 
 ## Preliminary Results
 
 Top TF-IDF words in listing descriptions:
 
-| Borough | Words |
-|---|---|
-| Manhattan | building, location, elevator, doorman, views |
-| Brooklyn | train, bars, backyard, cafes, shops |
-| Queens | minutes, bus, parking, lirr, drive |
-| Bronx | yankee, stadium, zoo, botanical, hospital |
-| Staten Island | ferry, bus, free, parking, medical |
+Borough : Words 
+Manhattan: building, location, elevator, doorman, views 
+Brooklyn: train, bars, backyard, cafes, shops 
+Queens: minutes, bus, parking, lirr, drive 
+Bronx: yankee, stadium, zoo, botanical, hospital 
+Staten Island: ferry, bus, free, parking, medical 
 
 Top TF-IDF words in reviews:
 
-| Borough | Words |
-|---|---|
-| Manhattan | location, staff, small, building, price |
-| Brooklyn | neighborhood, lovely, comfortable, responsive, subway |
-| Queens | nice, clean, quiet, bus, peaceful |
-| Bronx | nice, stadium, yankee, parking, metro |
-| Staten Island | ferry, bus, wonderful, quiet, parking |
+Borough : Words 
+Manhattan: location, staff, small, building, price 
+Brooklyn: neighborhood, lovely, comfortable, responsive, subway 
+Queens: nice, clean, quiet, bus, peaceful 
+Bronx: nice, stadium, yankee, parking, metro
+Staten Island: ferry, bus, wonderful, quiet, parking
 
 Top TF-IDF words in reviews by quarter:
 
-| Quarter | Words |
-|---|---|
-| Q4 2025 | subway, cozy, warm, christmas |
-| Q1 2026 | cozy, cold, warm, blizzard |
-| Q2 2026 | neighborhood, quiet, beautiful, lovely |
-| Q3 2026 | staff, clean, air, conditioning |
+Quarter: Words
+Q4 2025: subway, cozy, warm, christmas 
+Q1 2026: cozy, cold, warm, blizzard 
+Q2 2026: neighborhood, quiet, beautiful, lovely 
+Q3 2026: staff, clean, air, conditioning 
 
 ## Limitations
 
