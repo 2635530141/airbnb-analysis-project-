@@ -22,26 +22,26 @@ TF-IDF on listing descriptions and reviews, by borough, and by quarter.
 
 Top TF-IDF words in listing descriptions by burrough:
 
-Manhattan: building, location, elevator, doorman, views 
-Brooklyn: train, bars, backyard, cafes, shops 
-Queens: minutes, bus, parking, lirr, drive 
-Bronx: yankee, stadium, zoo, botanical, hospital 
-Staten Island: ferry, bus, free, parking, medical 
+Manhattan: building, location, elevator, doorman, views. 
+Brooklyn: train, bars, backyard, cafes, shops. 
+Queens: minutes, bus, parking, lirr, drive. 
+Bronx: yankee, stadium, zoo, botanical, hospital. 
+Staten Island: ferry, bus, free, parking, medical. 
 
 Top TF-IDF words in reviews by burrough:
 
-Manhattan: location, staff, small, building, price 
-Brooklyn: neighborhood, lovely, comfortable, responsive, subway 
-Queens: nice, clean, quiet, bus, peaceful 
-Bronx: nice, stadium, yankee, parking, metro
-Staten Island: ferry, bus, wonderful, quiet, parking
+Manhattan: location, staff, small, building, price. 
+Brooklyn: neighborhood, lovely, comfortable, responsive, subway. 
+Queens: nice, clean, quiet, bus, peaceful. 
+Bronx: nice, stadium, yankee, parking, metro. 
+Staten Island: ferry, bus, wonderful, quiet, parking. 
 
 Top TF-IDF words in reviews by quarter:
 
-Q4 2025: subway, cozy, warm, christmas 
-Q1 2026: cozy, cold, warm, blizzard 
-Q2 2026: neighborhood, quiet, beautiful, lovely 
-Q3 2026: staff, clean, air, conditioning 
+Q4 2025: subway, cozy, warm, christmas. 
+Q1 2026: cozy, cold, warm, blizzard. 
+Q2 2026: neighborhood, quiet, beautiful, lovely. 
+Q3 2026: staff, clean, air, conditioning. 
 
 ## Limitations
 
