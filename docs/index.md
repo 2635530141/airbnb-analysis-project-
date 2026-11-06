@@ -38,8 +38,6 @@ Code: `src/tfidf_descriptions.py` and `src/tfidf_reviews.py`. We also compare me
 
 ### How hosts describe listings (22,085 unique descriptions, Dec 2025 – Sep 2026)
 
-![Most distinctive words in listing descriptions by borough](assets/tfidf_top_terms_by_borough.png)
-
 | Borough | Most distinctive description terms | Median $/night (Mar → Jun → Sep 2026) | Terms stable across quarters |
 |---|---|---|---|
 | Manhattan | central, building, times, elevator, hudson, doorman | 208 → 234 → 245 | 9–10 / 10 |
@@ -52,17 +50,11 @@ Manhattan listings are sold on centrality and building features such as elevator
 
 ### What guests say (84,226 English reviews, Oct 2025 – Sep 2026)
 
-![Most distinctive words in guest reviews by borough](assets/reviews_tfidf_top_terms_by_borough.png)
-
 Manhattan reviews stand out for *location*, *staff*, *small* and *room*, which suggests hotel-like, professionally run units where guests pay for location and accept less space. Brooklyn reviews focus on *home*, *neighborhood* and *hosts*. Outer-borough reviews focus on the *host*, the *house*, *parking* and *clean*. Guests repeat the selling points hosts write about: location in Manhattan, transport and destinations elsewhere.
 
 ### Change over the year
 
-![Words that distinguish each quarter's guest reviews](assets/reviews_tfidf_top_terms_by_quarter.png)
-
 The quarter-to-quarter differences in language are seasonal and event-driven. Reviews mention *christmas* in Q4 2025, *cold*, *heater* and *blizzard* in Q1 2026, *graduation* in Q2 2026, and *air conditioning* in Q3 2026. In listing descriptions, the June 2026 snapshot is distinguished by *world cup* and *metlife*, as hosts marketed to visitors for the 2026 FIFA World Cup.
-
-![Words that distinguish each quarter's listing descriptions](assets/tfidf_top_terms_by_quarter.png)
 
 These results are preliminary and descriptive. We have not yet tested whether these terms predict price within a borough.
 
