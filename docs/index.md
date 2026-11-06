@@ -39,9 +39,9 @@ Staten Island: ferry, bus, wonderful, quiet, parking.
 Top TF-IDF words in reviews by quarter:
 
 Q4 2025: subway, cozy, warm, christmas. 
-Q1 2026: cozy, cold, warm, blizzard. 
+Q1 2026: cozy, cold, warm, winter, snow. 
 Q2 2026: neighborhood, quiet, beautiful, lovely. 
-Q3 2026: staff, clean, air, conditioning. 
+Q3 2026: staff, wonderful, clean, air. 
 
 ## Limitations
 

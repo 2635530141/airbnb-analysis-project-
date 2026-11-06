@@ -6,10 +6,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 
 files = glob.glob("data/raw/listings*.csv*")
 listings = pd.concat([pd.read_csv(f, low_memory=False) for f in files])
-listings["quarter"] = pd.to_datetime(listings["last_scraped"]).dt.to_period("Q").astype(str)
 listings = listings.dropna(subset=["description"])
-listings = listings.drop_duplicates(subset=["quarter", "description"])
-listings = listings.groupby(["quarter", "host_id"]).head(5)
+listings = listings.drop_duplicates(subset=["description"])
+listings = listings.groupby("host_id").head(5)
 
 reviews = pd.read_csv("data/raw/reviews.csv")
 reviews = reviews.drop(columns=["reviewer_id", "reviewer_name"])
@@ -40,6 +39,5 @@ def top_words(df, text, group):
 
 
 top_words(listings, "description", "neighbourhood_group_cleansed")
-top_words(listings, "description", "quarter")
 top_words(reviews, "comments", "neighbourhood_group_cleansed")
 top_words(reviews, "comments", "quarter")
