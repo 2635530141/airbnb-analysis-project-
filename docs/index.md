@@ -20,18 +20,16 @@ TF-IDF on listing descriptions and reviews, by borough, and by quarter.
 
 ## Preliminary Results
 
-Top TF-IDF words in listing descriptions:
+Top TF-IDF words in listing descriptions by burrough:
 
-Borough : Words 
 Manhattan: building, location, elevator, doorman, views 
 Brooklyn: train, bars, backyard, cafes, shops 
 Queens: minutes, bus, parking, lirr, drive 
 Bronx: yankee, stadium, zoo, botanical, hospital 
 Staten Island: ferry, bus, free, parking, medical 
 
-Top TF-IDF words in reviews:
+Top TF-IDF words in reviews by burrough:
 
-Borough : Words 
 Manhattan: location, staff, small, building, price 
 Brooklyn: neighborhood, lovely, comfortable, responsive, subway 
 Queens: nice, clean, quiet, bus, peaceful 
@@ -40,7 +38,6 @@ Staten Island: ferry, bus, wonderful, quiet, parking
 
 Top TF-IDF words in reviews by quarter:
 
-Quarter: Words
 Q4 2025: subway, cozy, warm, christmas 
 Q1 2026: cozy, cold, warm, blizzard 
 Q2 2026: neighborhood, quiet, beautiful, lovely 
