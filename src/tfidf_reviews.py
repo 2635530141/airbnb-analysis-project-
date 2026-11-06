@@ -34,7 +34,6 @@ Outputs go to outputs/.
 import re
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 
@@ -124,43 +123,4 @@ counts = rev.groupby(["neighbourhood_group_cleansed", "quarter"]).size().unstack
 counts.to_csv(OUT / "reviews_count_by_borough_quarter.csv")
 print("\nBorough:\n", top_b.groupby("borough", sort=False)["term"].apply(", ".join).to_string())
 print("\nQuarter:\n", top_q.groupby("quarter")["term"].apply(", ".join).to_string())
-
-# ---------------------------------------------------------------- figures
-INK, MUTED, BAR, GRID = "#1f2328", "#6e7781", "#3b6fb6", "#eaeef2"
-
-
-def style(ax):
-    ax.tick_params(axis="y", labelsize=9.5, colors=INK, length=0)
-    ax.tick_params(axis="x", labelsize=8, colors=MUTED)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    ax.spines["bottom"].set_color("#d0d7de")
-    ax.grid(axis="x", color=GRID, linewidth=0.8)
-    ax.set_axisbelow(True)
-
-
-def panel_figure(df, key, groups, titles, title, note, path, width):
-    fig, axes = plt.subplots(1, len(groups), figsize=(width, 4.6))
-    for ax, g, t in zip(axes, groups, titles):
-        d = df[df[key] == g].iloc[::-1]
-        ax.barh(d["term"], d["distinctiveness"], color=BAR, height=0.6)
-        ax.set_title(t, fontsize=10.5, color=INK, loc="left")
-        style(ax)
-    fig.suptitle(title, fontsize=13, color=INK, x=0.01, ha="left")
-    fig.text(0.01, 0.01, note, fontsize=8.5, color=MUTED)
-    fig.tight_layout(rect=(0, 0.04, 1, 0.93))
-    fig.savefig(path, dpi=200)
-
-
-n_b = rev["neighbourhood_group_cleansed"].value_counts()
-panel_figure(top_b, "borough", BOROUGHS, [f"{b}\n{n_b[b]:,} reviews" for b in BOROUGHS],
-             "Most distinctive words in guest reviews by borough, Oct 2025 – Sep 2026 (TF-IDF)",
-             f"Score = mean TF-IDF in borough minus mean in other boroughs. {len(rev):,} English reviews, "
-             f"max {MAX_PER_LISTING} per listing per quarter; place and host names removed. Source: Inside Airbnb.",
-             OUT / "reviews_tfidf_top_terms_by_borough.png", 16)
-n_q = rev["quarter"].value_counts()
-panel_figure(top_q, "quarter", QUARTERS, [f"{q}\n{n_q[q]:,} reviews" for q in QUARTERS],
-             "Words that distinguish each quarter's guest reviews (all NYC, TF-IDF)",
-             "Score = mean TF-IDF in quarter minus mean in the other quarters. 2026Q3 runs to Sep 14. Source: Inside Airbnb.",
-             OUT / "reviews_tfidf_top_terms_by_quarter.png", 13)
-print("\nSaved figures to outputs/")
+print("\nSaved tables to outputs/")

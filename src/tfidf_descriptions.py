@@ -37,7 +37,6 @@ Outputs go to outputs/.
 import re
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
@@ -168,49 +167,4 @@ summary = (top_year.groupby("borough")["term"].apply(lambda s: ", ".join(s.head(
            .join(year["neighbourhood_group_cleansed"].value_counts().rename("unique_descriptions"))
            .join(prices.add_prefix("median_price_")))
 summary.to_csv(OUT / "tfidf_summary_table.csv")
-
-# ---------------------------------------------------------------- figures
-INK, MUTED, BAR, GRID = "#1f2328", "#6e7781", "#3b6fb6", "#eaeef2"
-latest_price = prices.ffill(axis=1).iloc[:, -1]
-
-
-def style(ax):
-    ax.tick_params(axis="y", labelsize=9.5, colors=INK, length=0)
-    ax.tick_params(axis="x", labelsize=8, colors=MUTED)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    ax.spines["bottom"].set_color("#d0d7de")
-    ax.grid(axis="x", color=GRID, linewidth=0.8)
-    ax.set_axisbelow(True)
-
-
-fig, axes = plt.subplots(1, 5, figsize=(16, 4.8))
-for ax, b in zip(axes, BOROUGHS):
-    d = top_year[top_year["borough"] == b].iloc[::-1]
-    ax.barh(d["term"], d["distinctiveness"], color=BAR, height=0.6)
-    stable = int(stability.loc[b].min())
-    ax.set_title(f"{b}\n${latest_price[b]:.0f}/night · {stable}+/10 stable",
-                 fontsize=10.5, color=INK, loc="left")
-    style(ax)
-fig.suptitle("Most distinctive words in listing descriptions by borough, Dec 2025 – Sep 2026 (TF-IDF)",
-             fontsize=13, color=INK, x=0.01, ha="left")
-fig.text(0.01, 0.01, f"Score = mean TF-IDF in borough minus mean in other boroughs. "
-         f"{len(year):,} unique descriptions from 4 quarterly snapshots (max 5 per host per snapshot); place names removed. "
-         f"Median price from {SNAPSHOTS[-1]} snapshot. Source: Inside Airbnb.",
-         fontsize=8.5, color=MUTED)
-fig.tight_layout(rect=(0, 0.04, 1, 0.93))
-fig.savefig(OUT / "tfidf_top_terms_by_borough.png", dpi=200)
-
-fig, axes = plt.subplots(1, len(SNAPSHOTS), figsize=(13, 4.4))
-for ax, q in zip(axes, SNAPSHOTS):
-    d = top_quarter[top_quarter["snapshot"] == q].iloc[::-1]
-    ax.barh(d["term"], d["distinctiveness"], color=BAR, height=0.6)
-    ax.set_title(pd.Period(q).strftime("%b %Y"), fontsize=11, color=INK, loc="left")
-    style(ax)
-fig.suptitle("Words that distinguish each quarter's listing descriptions (all NYC, TF-IDF)",
-             fontsize=13, color=INK, x=0.01, ha="left")
-fig.text(0.01, 0.01, "Score = mean TF-IDF in snapshot minus mean in the other snapshots. Source: Inside Airbnb.",
-         fontsize=8.5, color=MUTED)
-fig.tight_layout(rect=(0, 0.04, 1, 0.93))
-fig.savefig(OUT / "tfidf_top_terms_by_quarter.png", dpi=200)
-print("\nSaved figures to outputs/")
+print("\nSaved tables to outputs/")
