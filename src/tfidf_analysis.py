@@ -14,6 +14,27 @@ reviews = pd.read_csv("data/raw/reviews.csv")
 reviews = reviews.drop(columns=["reviewer_id", "reviewer_name"])
 reviews = reviews[reviews["date"] >= "2025-10-01"]
 reviews = reviews.dropna(subset=["comments"])
+
+foreign_words = {
+    "und", "die", "der", "das", "sehr", "wir", "ist", "nicht", "mit", "ein", "eine", "auch", "uns", "hat",
+    "zu", "den", "dem", "für", "sind", "haben", "wohnung", "alles",
+    "el", "la", "los", "las", "muy", "excelente", "que", "y", "con", "para", "una", "todo", "bien",
+    "lugar", "por", "del", "lo", "fue", "buen", "buena",
+    "le", "les", "des", "est", "très", "et", "nous", "avec", "pour", "une", "tout", "séjour", "logement", "était",
+    "muito", "não", "com", "uma", "bom", "ótimo", "il", "di", "molto", "che", "per", "è", "ottimo",
+    "zeer", "het", "een", "heel",
+}
+
+
+def is_english(text):
+    words = re.findall(r"\w+", text.lower())
+    english = sum(w in ENGLISH_STOP_WORDS for w in words)
+    foreign = sum(w in foreign_words for w in words)
+    latin = sum(w.isascii() for w in words)
+    return latin > len(words) / 2 and english >= 2 * foreign
+
+
+reviews = reviews[reviews["comments"].apply(is_english)]
 reviews["quarter"] = pd.to_datetime(reviews["date"]).dt.to_period("Q").astype(str)
 boroughs = listings[["id", "neighbourhood_group_cleansed"]].drop_duplicates("id")
 reviews = reviews.merge(boroughs, left_on="listing_id", right_on="id")

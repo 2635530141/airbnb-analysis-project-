@@ -1,26 +1,26 @@
 group,word,score
-Bronx,nice,0.0098
-Bronx,stadium,0.0076
-Bronx,yankee,0.0071
-Bronx,parking,0.0054
-Bronx,good,0.0054
-Brooklyn,home,0.0114
-Brooklyn,neighborhood,0.0104
-Brooklyn,lovely,0.0098
-Brooklyn,comfortable,0.0088
-Brooklyn,responsive,0.008
-Manhattan,location,0.0354
-Manhattan,staff,0.0216
-Manhattan,small,0.0064
-Manhattan,excelente,0.0055
-Manhattan,building,0.0053
-Queens,airport,0.0125
-Queens,nice,0.0108
-Queens,clean,0.0104
-Queens,home,0.006
-Queens,quiet,0.0054
-Staten Island,ferry,0.0487
-Staten Island,home,0.0145
-Staten Island,bus,0.0113
-Staten Island,wonderful,0.0095
-Staten Island,thank,0.0095
+Bronx,nice,0.0119
+Bronx,stadium,0.0085
+Bronx,yankee,0.008
+Bronx,good,0.0067
+Bronx,parking,0.0061
+Brooklyn,home,0.0115
+Brooklyn,neighborhood,0.0107
+Brooklyn,lovely,0.0102
+Brooklyn,comfortable,0.008
+Brooklyn,hosts,0.0076
+Manhattan,location,0.0427
+Manhattan,staff,0.0255
+Manhattan,small,0.0078
+Manhattan,perfect,0.0065
+Manhattan,building,0.0063
+Queens,airport,0.0144
+Queens,nice,0.0127
+Queens,clean,0.0122
+Queens,home,0.0071
+Queens,quiet,0.0063
+Staten Island,ferry,0.0467
+Staten Island,home,0.0166
+Staten Island,wonderful,0.011
+Staten Island,quiet,0.011
+Staten Island,thank,0.0109
