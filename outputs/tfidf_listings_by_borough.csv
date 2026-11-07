@@ -1,0 +1,26 @@
+group,word,score
+Bronx,yankee,0.0426
+Bronx,stadium,0.0375
+Bronx,zoo,0.0283
+Bronx,botanical,0.0177
+Bronx,montefiore,0.0138
+Brooklyn,train,0.0127
+Brooklyn,bars,0.0085
+Brooklyn,backyard,0.0083
+Brooklyn,stop,0.0079
+Brooklyn,cafes,0.0077
+Manhattan,building,0.0237
+Manhattan,location,0.0131
+Manhattan,elevator,0.0126
+Manhattan,doorman,0.0124
+Manhattan,heart,0.0123
+Queens,airport,0.0432
+Queens,minutes,0.0324
+Queens,mins,0.0188
+Queens,parking,0.0157
+Queens,bus,0.0153
+Staten Island,ferry,0.1
+Staten Island,bus,0.04
+Staten Island,free,0.0362
+Staten Island,parking,0.0302
+Staten Island,medical,0.022

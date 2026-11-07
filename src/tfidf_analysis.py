@@ -27,17 +27,29 @@ for name in listings["host_name"].dropna().unique():
 stop_words = list(ENGLISH_STOP_WORDS.union(names))
 
 
-def top_words(df, text, group):
+def top_words(df, text, group, n=5):
     tfidf = TfidfVectorizer(stop_words=stop_words, min_df=20, token_pattern=r"\b[a-z]{3,}\b")
     X = tfidf.fit_transform(df[text].str.lower())
     words = tfidf.get_feature_names_out()
+    rows = []
     for g in sorted(df[group].unique()):
         in_group = (df[group] == g).values
         diff = np.asarray(X[in_group].mean(axis=0) - X[~in_group].mean(axis=0)).ravel()
-        print(g, ":", ", ".join(words[diff.argsort()[::-1][:10]]))
-    print()
+        for i in diff.argsort()[::-1][:n]:
+            rows.append({"group": g, "word": words[i], "score": round(diff[i], 4)})
+    return pd.DataFrame(rows)
 
 
-top_words(listings, "description", "neighbourhood_group_cleansed")
-top_words(reviews, "comments", "neighbourhood_group_cleansed")
-top_words(reviews, "comments", "quarter")
+listing_table = top_words(listings, "description", "neighbourhood_group_cleansed")
+review_table = top_words(reviews, "comments", "neighbourhood_group_cleansed")
+quarter_table = top_words(reviews, "comments", "quarter", n=10)
+
+print(listing_table.to_string(index=False))
+print()
+print(review_table.to_string(index=False))
+print()
+print(quarter_table.to_string(index=False))
+
+listing_table.to_csv("outputs/tfidf_listings_by_borough.csv", index=False)
+review_table.to_csv("outputs/tfidf_reviews_by_borough.csv", index=False)
+quarter_table.to_csv("outputs/tfidf_reviews_by_quarter.csv", index=False)
